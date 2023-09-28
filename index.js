@@ -5,8 +5,6 @@ const cardNumeration = [
   12, 13, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 1, 2, 3, 4, 5, 6, 7, 8, 9,
   10, 11, 12, 13,
 ];
-let shownCard;
-let hiddenCard;
 
 const getDeck = () => {
   const deck = [];
@@ -22,6 +20,19 @@ const getDeck = () => {
 };
 
 getRandomCard = () => {
-  hiddenCard = getDeck()[Math.floor(Math.random() * getDeck().length)];
-  shownCard = getDeck()[Math.floor(Math.random() * getDeck().length)];
+  randomCard = getDeck()[Math.floor(Math.random() * getDeck().length)];
+  return randomCard;
+};
+
+let shownCard = getRandomCard();
+let hiddenCard = getRandomCard();
+
+const getValueComparation = (hiddenCard, shownCard) => {
+  if (hiddenCard.cardValue === shownCard.cardvalue) {
+    return "Son iguales";
+  } else if (hiddenCard.cardValue < shownCard.cardValue) {
+    return "Tu carta es mayor";
+  } else {
+    return "Tu carta es menor";
+  }
 };
