@@ -81,6 +81,9 @@ equalChoice.addEventListener("click", () => {
   suitIconComputer.classList.remove("hidden");
 
   if (getValueComparation() === "igual") {
+    setTimeout(() => {
+      document.location.reload();
+    }, 3000);
     resultMessage.textContent = "¡Has ganado!🤩";
   } else {
     resultMessage.textContent = "Has perdido. ¡Prueba otra vez!😭";
@@ -88,6 +91,9 @@ equalChoice.addEventListener("click", () => {
 });
 
 greaterChoice.addEventListener("click", () => {
+  setTimeout(() => {
+    document.location.reload();
+  }, 3000);
   upperNumberComputer.classList.remove("hidden");
   bottomNumberComputer.classList.remove("hidden");
   suitIconComputer.classList.remove("hidden");
@@ -99,6 +105,9 @@ greaterChoice.addEventListener("click", () => {
 });
 
 smallerChoice.addEventListener("click", () => {
+  setTimeout(() => {
+    document.location.reload();
+  }, 3000);
   upperNumberComputer.classList.remove("hidden");
   bottomNumberComputer.classList.remove("hidden");
   suitIconComputer.classList.remove("hidden");
