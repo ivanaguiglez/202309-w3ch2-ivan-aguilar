@@ -4,33 +4,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Juego de cartas al azar.">
-  <link rel="shortcut icon" href="favicon juego de cartas greater or smaller.png" type="image/x-icon">
-  <script src="index.js"></script>
+  <meta name="description" content="Juego de cartas al azar Greater or Smaller.">
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="js/index.js" defer></script>
   <title>Greater or Smaller</title>
 </head>
 
 <body>
   <header>
-    <h1>
-      <span></span>
-    </h1>
+    <h1>"Greater or Smaller"</h1>
   </header>
   <main>
-    <section class="start-screen">
-      <span class="initial-message"></span>
-      <button type="button"></button>
-    </section>
-    <section class="game-screen">
-      <div class="mat"></div>
-      <div class="message"></div>
-      <div class="choice">
-        <button class="greater" type="button"></button>
-        <button class="smaller" type="button"></button>
-        <button class="resetart" type="button"></button>
+    <div class="start-screen">
+      <button class="start-button button" type="button">Start</button>
+    </div>
+    <div class="game-screen hidden">
+      <h2 class="initial-message">Haz tu apuesta</h2>
+      <div class="mat-background">
+        <div class="cards player-card">
+          <span class="card-upper-numeration"></span>
+          <span class="card-suit"></span>
+          <span class="player-number card-bottom-numeration"></span>
+        </div>
+        <div class="cards computer-card">
+          <span class="hidden computer-numbers card-upper-numeration "></span>
+          <span class="hidden card-suit"></span>
+          <span class="hidden computer-numbers card-bottom-numeration"></span>
+        </div>
       </div>
-    </section>
-
+      <span class="cards-result-message"></span>
+      <div class="choice">
+        <button class="greater button" type="button">Mayor</button>
+        <button class="equal button" type="button">Igual</button>
+        <button class="smaller button" type="button">Menor</button>
+      </div>
+    </div>
   </main>
   <footer>
     ISDI Coders Games ®
