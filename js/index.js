@@ -29,6 +29,7 @@ const equalChoice = document.querySelector(".equal");
 const greaterChoice = document.querySelector(".greater");
 const smallerChoice = document.querySelector(".smaller");
 const resultButtons = document.querySelector(".choice");
+const resultMessage = document.querySelector(".cards-result-message");
 
 const getDeck = () => {
   const deck = [];
@@ -51,13 +52,13 @@ getRandomCard = () => {
 let shownCard = getRandomCard();
 let hiddenCard = getRandomCard();
 
-const getValueComparation = (hiddenCard, shownCard) => {
+const getValueComparation = () => {
   if (hiddenCard.cardValue === shownCard.cardvalue) {
-    return "Son iguales";
-  } else if (hiddenCard.cardValue < shownCard.cardValue) {
-    return "Tu carta es mayor";
+    return "iguale";
+  } else if (shownCard.cardValue < hiddenCard.cardValue) {
+    return "mayor";
   } else {
-    return "Tu carta es menor";
+    return "menor";
   }
 };
 
@@ -72,4 +73,38 @@ startGame.addEventListener("click", () => {
   upperNumberComputer.textContent = hiddenCard.number;
   bottomNumberComputer.textContent = hiddenCard.number;
   suitIconComputer.textContent = hiddenCard.suit;
+});
+
+equalChoice.addEventListener("click", () => {
+  upperNumberComputer.classList.remove("hidden");
+  bottomNumberComputer.classList.remove("hidden");
+  suitIconComputer.classList.remove("hidden");
+
+  if (getValueComparation() === "igual") {
+    resultMessage.textContent = "¡Has ganado!🤩";
+  } else {
+    resultMessage.textContent = "Has perdido. ¡Prueba otra vez!😭";
+  }
+});
+
+greaterChoice.addEventListener("click", () => {
+  upperNumberComputer.classList.remove("hidden");
+  bottomNumberComputer.classList.remove("hidden");
+  suitIconComputer.classList.remove("hidden");
+  if (getValueComparation() === "mayor") {
+    resultMessage.textContent = "¡Has ganado!🤩";
+  } else {
+    resultMessage.textContent = "Has perdido. ¡Prueba otra vez!😭";
+  }
+});
+
+smallerChoice.addEventListener("click", () => {
+  upperNumberComputer.classList.remove("hidden");
+  bottomNumberComputer.classList.remove("hidden");
+  suitIconComputer.classList.remove("hidden");
+  if (getValueComparation() === "menor") {
+    resultMessage.textContent = "¡Has ganado!🤩";
+  } else {
+    resultMessage.textContent = "Has perdido. ¡Prueba otra vez!😭";
+  }
 });
