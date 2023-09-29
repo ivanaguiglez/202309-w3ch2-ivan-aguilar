@@ -1,9 +1,9 @@
 const suits = ["♥️", "♦️", "♠️", "♣️"];
-const cardValue = [14, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+const cardValue = [14, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 const cardNumeration = [
   1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,
-  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
-  12, 1,
+  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,
+  1,
 ];
 
 const gameScreenElement = document.querySelector(".game-screen");
@@ -25,6 +25,10 @@ const bottomNumberComputer = computerCardElement.querySelector(
 );
 const suitIconComputer = computerCardElement.querySelector(".card-suit");
 const startGame = document.querySelector(".start-button");
+const equalChoice = document.querySelector(".equal");
+const greaterChoice = document.querySelector(".greater");
+const smallerChoice = document.querySelector(".smaller");
+const resultButtons = document.querySelector(".choice");
 
 const getDeck = () => {
   const deck = [];
@@ -59,6 +63,7 @@ const getValueComparation = (hiddenCard, shownCard) => {
 
 startGame.addEventListener("click", () => {
   gameScreenElement.classList.remove("hidden");
+  startGame.classList.add("hidden");
 
   upperNumberPlayer.textContent = shownCard.number;
   bottomNumberPlayer.textContent = shownCard.number;

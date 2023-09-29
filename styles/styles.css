@@ -8,6 +8,7 @@ html {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   margin: 0;
+  font-size: 16px;
 }
 
 body,
@@ -22,8 +23,9 @@ h6 {
 }
 
 header {
-  padding: 64px;
-  margin: 20px;
+  font-family: "Nabla", cursive;
+  font-size: 4rem;
+  padding: 30px;
   display: flex;
   justify-content: center;
 }
@@ -48,39 +50,48 @@ header {
 
 h2 {
   margin: 5px;
+  color: #ffffff;
 }
+
 .mat-background {
-  width: 48rem;
+  width: 45rem;
   height: 36rem;
   display: flex;
-  background-color: rgb(6, 41, 9);
+  background-color: rgb(12, 71, 17);
   padding: 30px;
   margin: 20px;
   justify-content: center;
+  border-radius: 65px;
 }
+
 .cards {
   width: 16rem;
   height: 25rem;
   display: flex;
-  background-color: red;
+  background-color: #ffffff;
   padding: 5px;
   margin: 40px;
   justify-content: space-between;
   flex-direction: column;
+  border-radius: 20px;
 }
+
 .cards-result-message {
-  background-color: aquamarine;
   width: 24em;
-  height: 1.5rem;
+  height: 2.5rem;
   margin: 2px;
   padding: 5px;
+  color: #ffffff;
+  text-align: center;
 }
 .card-upper-numeration {
+  padding: 10px 0 0 15px;
   font-family: "Courier New", Courier, monospace;
   font-size: 30px;
 }
 
 .card-bottom-numeration {
+  padding: 0 15px 10px 0;
   font-family: "Courier New", Courier, monospace;
   font-size: 30px;
   display: inline-flex;
@@ -105,6 +116,10 @@ h2 {
   margin-left: 30px;
 }
 
+.initial-mesage {
+  font-size: 2rem;
+}
+
 footer {
   position: relative;
   right: 0;
@@ -112,8 +127,8 @@ footer {
   left: 0;
   margin: 1rem;
   padding: 1rem;
-  background-color: #efefef;
   text-align: center;
+  color: #ffffff;
 }
 
 .hidden {
